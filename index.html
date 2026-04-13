@@ -1181,8 +1181,9 @@
           </span>
         </label>
         <div id="form-error" style="display:none;background:rgba(220,53,69,0.15);border:1px solid rgba(220,53,69,0.4);border-radius:8px;padding:12px 16px;font-size:0.82rem;color:#e74c3c;"></div>
-        <button id="submit-btn" onclick="soumettreFormulaire()" style="background:var(--sun);color:#fff;border:none;padding:18px;border-radius:10px;font-weight:700;font-size:1.1rem;cursor:pointer;font-family:'Cerebri Sans Pro','Inter',sans-serif;transition:all 0.2s;box-shadow:0 0 30px rgba(55,174,74,0.3);opacity:0.5;pointer-events:none;" onmouseover="if(this.style.pointerEvents!='none')this.style.background='#009447'" onmouseout="this.style.background='var(--sun)'">
-          Obtenir ma soumission gratuite → Réponse en 48h →
+        <p id="consent-hint" style="font-size:0.78rem;color:#e74c3c;text-align:center;font-weight:600;">Cochez la case ci-dessus pour activer le bouton</p>
+        <button id="submit-btn" onclick="soumettreFormulaire()" style="background:var(--sun);color:#fff;border:none;padding:18px;border-radius:12px;font-weight:700;font-size:1.1rem;cursor:pointer;font-family:'Cerebri Sans Pro','Inter',sans-serif;transition:all 0.2s;box-shadow:0 4px 20px rgba(55,174,74,0.3);opacity:0.5;pointer-events:none;width:100%;" onmouseover="if(this.style.pointerEvents!='none')this.style.background='#009447'" onmouseout="this.style.background='var(--sun)'">
+          Obtenir ma soumission gratuite →
         </button>
         <p style="font-size:0.75rem;color:var(--text-muted);text-align:center;">
           ✓ Sans engagement · ✓ Données protégées (Loi 25) · ✓ Non partagées à des tiers
@@ -1195,45 +1196,56 @@
 </section>
 
 <!-- FOOTER -->
-<footer style="background:#006637;color:#fff;padding:60px 5% 30px;">
-  <div style="max-width:1100px;margin:0 auto;">
+<footer style="background:linear-gradient(180deg, #006637 0%, #004d29 100%);color:#fff;padding:0;">
+  <!-- Footer CTA band -->
+  <div style="background:rgba(55,174,74,0.2);border-bottom:1px solid rgba(255,255,255,0.1);padding:28px 5%;text-align:center;">
+    <p style="font-size:1.1rem;font-weight:700;margin-bottom:8px;">Prêt à réduire votre facture Hydro?</p>
+    <a href="#soumission" style="display:inline-block;background:#37AE4A;color:#fff;padding:12px 32px;border-radius:100px;font-weight:700;font-size:0.9rem;text-decoration:none;transition:all 0.2s;box-shadow:0 4px 15px rgba(0,0,0,0.2);" onmouseover="this.style.background='#2d9a3e'" onmouseout="this.style.background='#37AE4A'">Soumission gratuite →</a>
+  </div>
+  <!-- Footer main -->
+  <div style="max-width:1100px;margin:0 auto;padding:50px 5% 30px;">
     <div class="footer-grid" style="display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:40px;">
+      <!-- Col 1: Logo + description -->
       <div>
-        <span class="logo logo-footer"><img src="RCA SOLAIRE.png" alt="RCA Solaire" style="filter:brightness(1.2);"></span>
-        <p style="color:rgba(255,255,255,0.7);font-size:0.88rem;line-height:1.7;margin-top:16px;">Service de référence en énergie solaire industrielle. Réseau d'entrepreneurs certifiés RBQ au Québec.</p>
-        <div style="display:flex;gap:12px;margin-top:16px;">
-          <span style="background:rgba(255,255,255,0.15);padding:6px 14px;border-radius:6px;font-size:0.75rem;font-weight:600;">RBQ Certifié</span>
-          <span style="background:rgba(255,255,255,0.15);padding:6px 14px;border-radius:6px;font-size:0.75rem;font-weight:600;">ÉcoPerformance</span>
+        <span class="logo logo-footer"><img src="RCA SOLAIRE.png" alt="RCA Solaire" style="filter:brightness(1.3);"></span>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.88rem;line-height:1.8;margin-top:16px;">Votre partenaire en énergie solaire industrielle. Nous vous référons gratuitement aux meilleurs entrepreneurs certifiés RBQ au Québec.</p>
+        <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;">
+          <span style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);padding:6px 14px;border-radius:100px;font-size:0.72rem;font-weight:600;display:flex;align-items:center;gap:6px;"><i data-lucide="shield-check" style="width:14px;height:14px;"></i> RBQ Certifié</span>
+          <span style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);padding:6px 14px;border-radius:100px;font-size:0.72rem;font-weight:600;display:flex;align-items:center;gap:6px;"><i data-lucide="leaf" style="width:14px;height:14px;"></i> ÉcoPerformance</span>
         </div>
       </div>
+      <!-- Col 2: Navigation -->
       <div>
-        <h4 style="font-size:0.9rem;font-weight:700;margin-bottom:16px;text-transform:uppercase;letter-spacing:0.1em;">Navigation</h4>
-        <div class="footer-links" style="display:flex;flex-direction:column;gap:10px;">
-          <a href="#avantages" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.88rem;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Avantages</a>
-          <a href="#calculateur" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.88rem;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Calculateur</a>
-          <a href="#processus" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.88rem;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Processus</a>
-          <a href="#temoignages" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.88rem;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Témoignages</a>
-          <a href="#faq-section" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.88rem;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">FAQ</a>
+        <h4 style="font-size:0.82rem;font-weight:700;margin-bottom:20px;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.5);">Navigation</h4>
+        <div class="footer-links" style="display:flex;flex-direction:column;gap:12px;">
+          <a href="#avantages" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;transition:color 0.2s;" onmouseover="this.style.color='#37AE4A'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Avantages</a>
+          <a href="#calculateur" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;transition:color 0.2s;" onmouseover="this.style.color='#37AE4A'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Calculateur</a>
+          <a href="#processus" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;transition:color 0.2s;" onmouseover="this.style.color='#37AE4A'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Processus</a>
+          <a href="#temoignages" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;transition:color 0.2s;" onmouseover="this.style.color='#37AE4A'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Témoignages</a>
+          <a href="#faq-section" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;transition:color 0.2s;" onmouseover="this.style.color='#37AE4A'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">FAQ</a>
+          <a href="#soumission" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;transition:color 0.2s;" onmouseover="this.style.color='#37AE4A'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Soumission</a>
         </div>
       </div>
+      <!-- Col 3: Contact -->
       <div>
-        <h4 style="font-size:0.9rem;font-weight:700;margin-bottom:16px;text-transform:uppercase;letter-spacing:0.1em;">Contact</h4>
-        <div style="display:flex;flex-direction:column;gap:12px;">
-          <a href="mailto:info@rcasolaire.com" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.88rem;display:flex;align-items:center;gap:8px;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'"><i data-lucide="mail" style="width:16px;height:16px;"></i> info@rcasolaire.com</a>
-          <span style="color:rgba(255,255,255,0.7);font-size:0.88rem;display:flex;align-items:center;gap:8px;"><i data-lucide="map-pin" style="width:16px;height:16px;"></i> Montréal · Laval · Rive-Sud · Québec · Estrie</span>
+        <h4 style="font-size:0.82rem;font-weight:700;margin-bottom:20px;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.5);">Contact</h4>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <a href="tel:+15141234567" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:10px;transition:color 0.2s;" onmouseover="this.style.color='#37AE4A'" onmouseout="this.style.color='rgba(255,255,255,0.75)'"><i data-lucide="phone" style="width:16px;height:16px;"></i> (514) 123-4567</a>
+          <a href="mailto:info@rcasolaire.com" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:10px;transition:color 0.2s;" onmouseover="this.style.color='#37AE4A'" onmouseout="this.style.color='rgba(255,255,255,0.75)'"><i data-lucide="mail" style="width:16px;height:16px;"></i> info@rcasolaire.com</a>
+          <span style="color:rgba(255,255,255,0.6);font-size:0.85rem;display:flex;align-items:flex-start;gap:10px;line-height:1.5;"><i data-lucide="map-pin" style="width:16px;height:16px;flex-shrink:0;margin-top:2px;"></i> Montréal · Laval · Rive-Sud · Québec · Estrie</span>
+          <span style="color:rgba(255,255,255,0.6);font-size:0.85rem;display:flex;align-items:center;gap:10px;"><i data-lucide="clock" style="width:16px;height:16px;"></i> Lun-Ven 8h-17h</span>
         </div>
       </div>
     </div>
-    <div style="border-top:1px solid rgba(255,255,255,0.15);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-      <p style="font-size:0.75rem;color:rgba(255,255,255,0.5);">© 2025 RCA Solaire. Tous droits réservés.</p>
-      <div style="display:flex;gap:20px;">
-        <a href="/politique-confidentialite" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.75rem;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Politique de confidentialité</a>
-        <a href="/conditions-utilisation" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.75rem;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Conditions d'utilisation</a>
+    <!-- Bottom bar -->
+    <div style="border-top:1px solid rgba(255,255,255,0.12);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+      <p style="font-size:0.75rem;color:rgba(255,255,255,0.4);">© 2025 RCA Solaire. Tous droits réservés.</p>
+      <div style="display:flex;gap:24px;">
+        <a href="/politique-confidentialite" style="color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.75rem;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Confidentialité</a>
+        <a href="/conditions-utilisation" style="color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.75rem;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Conditions</a>
       </div>
     </div>
-    <div style="margin-top:20px;font-size:0.68rem;color:rgba(255,255,255,0.35);line-height:1.7;">
-      <p style="margin-bottom:8px;"><strong style="color:rgba(255,255,255,0.5);">Mentions légales</strong> — Les montants de subventions sont basés sur les paramètres du programme provincial et le CIIP fédéral. Les résultats du calculateur sont indicatifs (±15%). Les témoignages reflètent des expériences individuelles. RCA Solaire est conforme à la Loi 25 (Québec).</p>
-    </div>
+    <p style="margin-top:16px;font-size:0.65rem;color:rgba(255,255,255,0.25);line-height:1.6;">Mentions légales — Les montants de subventions sont indicatifs (±15%), basés sur le programme provincial et le CIIP fédéral. Les témoignages reflètent des expériences individuelles. RCA Solaire est conforme à la Loi 25 (Québec).</p>
   </div>
 </footer>
 
@@ -1245,10 +1257,12 @@
 document.addEventListener('DOMContentLoaded', function() {
   const checkbox = document.getElementById('consent-checkbox');
   const btn = document.getElementById('submit-btn');
+  const hint = document.getElementById('consent-hint');
   if (checkbox && btn) {
     checkbox.addEventListener('change', function() {
       btn.style.opacity = this.checked ? '1' : '0.5';
       btn.style.pointerEvents = this.checked ? 'auto' : 'none';
+      if (hint) hint.style.display = this.checked ? 'none' : 'block';
     });
   }
 });
