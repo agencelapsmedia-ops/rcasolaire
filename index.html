@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RCA Solaire | Subvention 1 000$/kW + 30% Déduction Fiscale</title>
-<meta name="description" content="Nouveau programme actif le 31 mars : 1 000$/kW de subvention + 30% de déduction d'impôts sur votre installation solaire industrielle. Places limitées. Soumission gratuite en 48h.">
+<title>RCA Solaire | Subvention 1 000$/kW + 30% Deduction Fiscale</title>
+<meta name="description" content="Nouveau programme actif le 31 mars : 1 000$/kW de subvention + 30% de deduction d'impots sur votre installation solaire industrielle. Places limitees. Soumission gratuite en 48h.">
 <!-- Google tag (gtag.js) — REMPLACER PAR VOS IDs GA4 + Google Ads -->
 <!--
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -22,7 +22,7 @@
 <!-- Lucide Icons (SVG icon library) -->
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <style>
-  /* Si vous avez les fichiers Cerebri Sans Pro et Volte Medium, décommentez et ajustez les chemins: */
+  /* Si vous avez les fichiers Cerebri Sans Pro et Volte Medium, decommentez et ajustez les chemins: */
   /*
   @font-face {
     font-family: 'Cerebri Sans Pro';
@@ -48,10 +48,10 @@
     /* CHARTE GRAPHIQUE RCA DISTRIBUTION */
     --rca-green: #37AE4A;       /* Vert clair principal */
     --rca-green-mid: #009447;   /* Vert moyen */
-    --rca-green-dark: #006637;  /* Vert foncé */
+    --rca-green-dark: #006637;  /* Vert fonce */
     --rca-gray: #58595B;        /* Gris corporate */
 
-    /* THÈME CLAIR PROFESSIONNEL */
+    /* THEME CLAIR PROFESSIONNEL */
     --sun: #37AE4A;
     --sun-deep: #009447;
     --green: #006637;
@@ -116,7 +116,7 @@
     align-items: center;
   }
   .logo img {
-    height: 120px;
+    height: 70px;
     width: auto;
   }
   .logo-footer img {
@@ -127,13 +127,25 @@
     background: var(--sun);
     color: #fff;
     padding: 10px 22px;
-    border-radius: 8px;
+    border-radius: 100px;
     font-weight: 700;
     font-size: 0.85rem;
     text-decoration: none;
     transition: all 0.2s;
   }
   .nav-cta:hover { background: var(--sun-deep); transform: translateY(-1px); }
+
+  /* NAV LINKS */
+  .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+  .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--sun); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); transition: all 0.3s; }
+  .mobile-menu { display: none; position: fixed; inset: 0; background: rgba(255,255,255,0.98); z-index: 1000; flex-direction: column; align-items: center; justify-content: center; gap: 32px; }
+  .mobile-menu.active { display: flex; }
+  .mobile-menu a { font-size: 1.3rem; font-weight: 600; color: var(--text); text-decoration: none; }
+  .mobile-menu a:hover { color: var(--sun); }
+  .mobile-close { position: absolute; top: 24px; right: 24px; font-size: 2rem; background: none; border: none; cursor: pointer; color: var(--text); }
 
   /* HERO */
   .hero {
@@ -358,17 +370,17 @@
   .slider-wrap { position: relative; }
   input[type="range"] {
     width: 100%;
-    height: 6px;
+    height: 8px;
     appearance: none;
     background: var(--dark);
-    border-radius: 3px;
+    border-radius: 4px;
     outline: none;
     cursor: pointer;
     margin-bottom: 10px;
   }
   input[type="range"]::-webkit-slider-thumb {
     appearance: none;
-    width: 20px; height: 20px;
+    width: 24px; height: 24px;
     background: var(--sun);
     border-radius: 50%;
     cursor: pointer;
@@ -376,22 +388,22 @@
   }
   .slider-val {
     font-family: 'DM Mono', monospace;
-    font-size: 1.4rem;
-    font-weight: 500;
+    font-size: 1.6rem;
+    font-weight: 700;
     color: var(--sun);
   }
   .slider-range { display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-muted); margin-top: 4px; }
 
-  .result-block { margin-bottom: 22px; }
-  .result-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+  .result-block { margin-bottom: 16px; padding: 12px 16px; border-left: 3px solid var(--sun); background: rgba(55,174,74,0.04); border-radius: 0 8px 8px 0; }
+  .result-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
   .result-value {
     font-family: 'DM Mono', monospace;
-    font-size: 1.6rem;
-    font-weight: 500;
+    font-size: 1.8rem;
+    font-weight: 700;
     color: var(--text);
   }
-  .result-value.big { font-size: 2.2rem; color: var(--sun-deep); }
-  .result-value.gold { color: var(--sun); }
+  .result-value.big { font-size: 2.4rem; color: var(--sun); }
+  .result-value.gold { color: var(--sun-deep); font-size: 1.8rem; font-weight: 700; }
   .divider { height: 1px; background: var(--border); margin: 20px 0; }
 
   .calc-cta {
@@ -490,7 +502,7 @@
   }
 
   /* FAQ */
-  .faq-list { margin-top: 48px; display: flex; flex-direction: column; gap: 12px; max-width: 800px; }
+  .faq-list { margin: 48px auto 0; display: flex; flex-direction: column; gap: 12px; max-width: 800px; }
   .faq-item {
     background: #fff;
     border: 1px solid var(--border);
@@ -644,26 +656,67 @@
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: #f0f0f0; }
   ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+
+  /* RESPONSIVE MOBILE */
+  @media(max-width:768px){
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .hero { min-height: 60vh; padding: 40px 4% 40px; }
+    .hero-inner-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
+    .hero-stats { grid-template-columns: 1fr !important; }
+    section { padding: 50px 4%; }
+    .logo img { height: 50px; }
+    .logo-footer img { height: 80px; }
+    .stat-num { font-size: 1.8rem; }
+    h1 { font-size: clamp(2rem, 8vw, 3rem); }
+    h2 { font-size: clamp(1.6rem, 6vw, 2.4rem); }
+    .nav-cta { padding: 8px 16px; font-size: 0.8rem; }
+    .footer-grid { grid-template-columns: 1fr !important; text-align: center; }
+    .footer-grid .footer-links { align-items: center; }
+  }
 </style>
 </head>
 <body>
 
 <!-- URGENCE BAR -->
 <div class="urgence-bar">
-  ⚡ NOUVEAU PROGRAMME ACTIF LE 31 MARS → 1 000 $/kW + 30% DÉDUCTION FISCALE → PLACES LIMITÉES, RÉSERVEZ MAINTENANT
+  ⚡ NOUVEAU PROGRAMME ACTIF LE 31 MARS → 1 000 $/kW + 30% DEDUCTION FISCALE → PLACES LIMITEES, RESERVEZ MAINTENANT
 </div>
 
 <!-- NAV -->
 <nav>
   <div class="logo"><img src="RCA SOLAIRE.png" alt="RCA Solaire"></div>
-  <a href="#soumission" class="nav-cta">Soumission gratuite →</a>
+  <ul class="nav-links">
+    <li><a href="#avantages">Avantages</a></li>
+    <li><a href="#calculateur">Calculateur</a></li>
+    <li><a href="#processus">Processus</a></li>
+    <li><a href="#temoignages">Témoignages</a></li>
+    <li><a href="#faq-section">FAQ</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <a href="#soumission" class="nav-cta">Soumission gratuite</a>
+    <button class="hamburger" onclick="document.getElementById('mobile-menu').classList.add('active')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" onclick="document.getElementById('mobile-menu').classList.remove('active')">&times;</button>
+  <a href="#avantages" onclick="document.getElementById('mobile-menu').classList.remove('active')">Avantages</a>
+  <a href="#calculateur" onclick="document.getElementById('mobile-menu').classList.remove('active')">Calculateur</a>
+  <a href="#processus" onclick="document.getElementById('mobile-menu').classList.remove('active')">Processus</a>
+  <a href="#temoignages" onclick="document.getElementById('mobile-menu').classList.remove('active')">Témoignages</a>
+  <a href="#faq-section" onclick="document.getElementById('mobile-menu').classList.remove('active')">FAQ</a>
+  <a href="#soumission" class="btn-primary" onclick="document.getElementById('mobile-menu').classList.remove('active')">Soumission gratuite</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <div style="max-width:1100px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+  <div class="hero-inner-grid" style="max-width:1100px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
     <div class="hero-content fade-in">
       <div class="badge">Programme actif dès le 31 mars → Places limitées</div>
       <h1>
@@ -762,7 +815,7 @@
 </section>
 
 <!-- SOLUTION -->
-<section>
+<section id="avantages">
   <div class="container">
     <div class="solution-grid">
       <div class="fade-in">
@@ -944,7 +997,7 @@
 </section>
 
 <!-- TEMOIGNAGES -->
-<section class="temoignages">
+<section class="temoignages" id="temoignages">
   <div class="container">
     <div class="section-label fade-in">Ils ont déjà fait le saut</div>
     <h2 class="fade-in">+200 BÂTIMENTS INDUSTRIELS<br>ÉQUIPÉS AU QUÉBEC</h2>
@@ -990,10 +1043,10 @@
 </section>
 
 <!-- FAQ -->
-<section>
+<section id="faq-section">
   <div class="container">
-    <div class="section-label fade-in">Vos questions, répondues</div>
-    <h2 class="fade-in">TOUT CE QUE VOUS VOULEZ SAVOIR<br>AVANT DE VOUS LANCER</h2>
+    <div class="section-label fade-in" style="text-align:center;">Vos questions, répondues</div>
+    <h2 class="fade-in" style="text-align:center;">TOUT CE QUE VOUS VOULEZ SAVOIR<br>AVANT DE VOUS LANCER</h2>
     <div class="faq-list" id="faq">
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
@@ -1083,13 +1136,13 @@
       </div>
     </div>
 
-    <div style="max-width:540px;margin:0 auto;background:var(--dark-3);border:1px solid var(--border);border-radius:16px;padding:36px;">
+    <div style="max-width:540px;margin:0 auto;background:#fff;border:2px solid var(--sun);border-radius:16px;padding:36px;box-shadow:var(--shadow-lg);">
       <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:0.05em;margin-bottom:6px;">DEMANDEZ VOTRE SOUMISSION GRATUITE</h3>
       <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:28px;">Réponse garantie en 48h · Places limitées ce mois-ci</p>
       <div style="display:flex;flex-direction:column;gap:14px;">
-        <input id="f-entreprise" type="text" placeholder="Nom de votre entreprise" style="background:var(--dark-2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;color:var(--text);font-family:'Cerebri Sans Pro','Inter',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='rgba(55,174,74,0.5)'" onblur="this.style.borderColor='var(--border)'">
-        <input id="f-superficie" type="text" placeholder="Superficie approximative du toit (pieds²)" style="background:var(--dark-2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;color:var(--text);font-family:'Cerebri Sans Pro','Inter',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='rgba(55,174,74,0.5)'" onblur="this.style.borderColor='var(--border)'">
-        <select id="f-type-batiment" style="background:var(--dark-2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;color:var(--text-muted);font-family:'Cerebri Sans Pro','Inter',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 16px center;" onfocus="this.style.borderColor='rgba(55,174,74,0.5)'" onblur="this.style.borderColor='var(--border)'" onchange="if(this.value)this.style.color='var(--text)'">
+        <input id="f-entreprise" type="text" placeholder="Nom de votre entreprise" style="background:#fff;border:1.5px solid rgba(0,0,0,0.12);border-radius:8px;padding:14px 16px;min-height:48px;color:var(--text);font-family:'Cerebri Sans Pro','Inter',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='rgba(55,174,74,0.5)'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'">
+        <input id="f-superficie" type="text" placeholder="Superficie approximative du toit (pieds²)" style="background:#fff;border:1.5px solid rgba(0,0,0,0.12);border-radius:8px;padding:14px 16px;min-height:48px;color:var(--text);font-family:'Cerebri Sans Pro','Inter',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='rgba(55,174,74,0.5)'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'">
+        <select id="f-type-batiment" style="background:#fff;border:1.5px solid rgba(0,0,0,0.12);border-radius:8px;padding:14px 16px;min-height:48px;color:var(--text-muted);font-family:'Cerebri Sans Pro','Inter',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 16px center;" onfocus="this.style.borderColor='rgba(55,174,74,0.5)'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'" onchange="if(this.value)this.style.color='var(--text)'">
           <option value="" disabled selected>Type de bâtiment (optionnel)</option>
           <option value="Maison">Maison</option>
           <option value="Plex">Plex (duplex, triplex, etc.)</option>
@@ -1099,8 +1152,8 @@
           <option value="Agricole">Agricole</option>
           <option value="Autre">Autre</option>
         </select>
-        <input id="f-ville" type="text" placeholder="Ville ou région (optionnel)" style="background:var(--dark-2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;color:var(--text);font-family:'Cerebri Sans Pro','Inter',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='rgba(55,174,74,0.5)'" onblur="this.style.borderColor='var(--border)'">
-        <select id="f-delai" style="background:var(--dark-2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;color:var(--text-muted);font-family:'Cerebri Sans Pro','Inter',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 16px center;" onfocus="this.style.borderColor='rgba(55,174,74,0.5)'" onblur="this.style.borderColor='var(--border)'" onchange="if(this.value)this.style.color='var(--text)'">
+        <input id="f-ville" type="text" placeholder="Ville ou région (optionnel)" style="background:#fff;border:1.5px solid rgba(0,0,0,0.12);border-radius:8px;padding:14px 16px;min-height:48px;color:var(--text);font-family:'Cerebri Sans Pro','Inter',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='rgba(55,174,74,0.5)'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'">
+        <select id="f-delai" style="background:#fff;border:1.5px solid rgba(0,0,0,0.12);border-radius:8px;padding:14px 16px;min-height:48px;color:var(--text-muted);font-family:'Cerebri Sans Pro','Inter',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 16px center;" onfocus="this.style.borderColor='rgba(55,174,74,0.5)'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'" onchange="if(this.value)this.style.color='var(--text)'">
           <option value="" disabled selected>Délai souhaité (optionnel)</option>
           <option value="Urgent">Le plus tôt possible</option>
           <option value="1-3 mois">1 à 3 mois</option>
@@ -1108,7 +1161,7 @@
           <option value="6-12 mois">6 à 12 mois</option>
           <option value="Exploration">Je m'informe pour le moment</option>
         </select>
-        <select id="f-budget" style="background:var(--dark-2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;color:var(--text-muted);font-family:'Cerebri Sans Pro','Inter',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 16px center;" onfocus="this.style.borderColor='rgba(55,174,74,0.5)'" onblur="this.style.borderColor='var(--border)'" onchange="if(this.value)this.style.color='var(--text)'">
+        <select id="f-budget" style="background:#fff;border:1.5px solid rgba(0,0,0,0.12);border-radius:8px;padding:14px 16px;min-height:48px;color:var(--text-muted);font-family:'Cerebri Sans Pro','Inter',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 16px center;" onfocus="this.style.borderColor='rgba(55,174,74,0.5)'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'" onchange="if(this.value)this.style.color='var(--text)'">
           <option value="" disabled selected>Budget approximatif (optionnel)</option>
           <option value="Moins de 50 000$">Moins de 50 000$</option>
           <option value="50 000$ - 100 000$">50 000$ - 100 000$</option>
@@ -1116,8 +1169,8 @@
           <option value="200 000$ et plus">200 000$ et plus</option>
           <option value="Je ne sais pas">Je ne sais pas encore</option>
         </select>
-        <input id="f-telephone" type="tel" placeholder="Votre numéro de téléphone" style="background:var(--dark-2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;color:var(--text);font-family:'Cerebri Sans Pro','Inter',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='rgba(55,174,74,0.5)'" onblur="this.style.borderColor='var(--border)'">
-        <input id="f-email" type="email" placeholder="Courriel professionnel" style="background:var(--dark-2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;color:var(--text);font-family:'Cerebri Sans Pro','Inter',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='rgba(55,174,74,0.5)'" onblur="this.style.borderColor='var(--border)'">
+        <input id="f-telephone" type="tel" placeholder="Votre numéro de téléphone" style="background:#fff;border:1.5px solid rgba(0,0,0,0.12);border-radius:8px;padding:14px 16px;min-height:48px;color:var(--text);font-family:'Cerebri Sans Pro','Inter',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='rgba(55,174,74,0.5)'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'">
+        <input id="f-email" type="email" placeholder="Courriel professionnel" style="background:#fff;border:1.5px solid rgba(0,0,0,0.12);border-radius:8px;padding:14px 16px;min-height:48px;color:var(--text);font-family:'Cerebri Sans Pro','Inter',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='rgba(55,174,74,0.5)'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'">
         <!-- CONSENTEMENT LOI 25 + LCAP -->
         <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:0.8rem;color:var(--text-muted);line-height:1.5;">
           <input type="checkbox" id="consent-checkbox" style="margin-top:3px;accent-color:var(--sun);width:16px;height:16px;flex-shrink:0;">
@@ -1128,7 +1181,7 @@
           </span>
         </label>
         <div id="form-error" style="display:none;background:rgba(220,53,69,0.15);border:1px solid rgba(220,53,69,0.4);border-radius:8px;padding:12px 16px;font-size:0.82rem;color:#e74c3c;"></div>
-        <button id="submit-btn" onclick="soumettreFormulaire()" style="background:var(--sun);color:#fff;border:none;padding:17px;border-radius:10px;font-weight:700;font-size:1rem;cursor:pointer;font-family:'Cerebri Sans Pro','Inter',sans-serif;transition:all 0.2s;box-shadow:0 0 30px rgba(55,174,74,0.3);opacity:0.5;pointer-events:none;" onmouseover="if(this.style.pointerEvents!='none')this.style.background='#009447'" onmouseout="this.style.background='var(--sun)'">
+        <button id="submit-btn" onclick="soumettreFormulaire()" style="background:var(--sun);color:#fff;border:none;padding:18px;border-radius:10px;font-weight:700;font-size:1.1rem;cursor:pointer;font-family:'Cerebri Sans Pro','Inter',sans-serif;transition:all 0.2s;box-shadow:0 0 30px rgba(55,174,74,0.3);opacity:0.5;pointer-events:none;" onmouseover="if(this.style.pointerEvents!='none')this.style.background='#009447'" onmouseout="this.style.background='var(--sun)'">
           Obtenir ma soumission gratuite → Réponse en 48h →
         </button>
         <p style="font-size:0.75rem;color:var(--text-muted);text-align:center;">
@@ -1142,36 +1195,46 @@
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div style="margin-bottom:16px;">
-    <span class="logo logo-footer"><img src="RCA SOLAIRE.png" alt="RCA Solaire"></span>
+<footer style="background:#006637;color:#fff;padding:60px 5% 30px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="footer-grid" style="display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:40px;">
+      <div>
+        <span class="logo logo-footer"><img src="RCA SOLAIRE.png" alt="RCA Solaire" style="filter:brightness(1.2);"></span>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.88rem;line-height:1.7;margin-top:16px;">Service de référence en énergie solaire industrielle. Réseau d'entrepreneurs certifiés RBQ au Québec.</p>
+        <div style="display:flex;gap:12px;margin-top:16px;">
+          <span style="background:rgba(255,255,255,0.15);padding:6px 14px;border-radius:6px;font-size:0.75rem;font-weight:600;">RBQ Certifié</span>
+          <span style="background:rgba(255,255,255,0.15);padding:6px 14px;border-radius:6px;font-size:0.75rem;font-weight:600;">ÉcoPerformance</span>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size:0.9rem;font-weight:700;margin-bottom:16px;text-transform:uppercase;letter-spacing:0.1em;">Navigation</h4>
+        <div class="footer-links" style="display:flex;flex-direction:column;gap:10px;">
+          <a href="#avantages" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.88rem;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Avantages</a>
+          <a href="#calculateur" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.88rem;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Calculateur</a>
+          <a href="#processus" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.88rem;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Processus</a>
+          <a href="#temoignages" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.88rem;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Témoignages</a>
+          <a href="#faq-section" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.88rem;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">FAQ</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size:0.9rem;font-weight:700;margin-bottom:16px;text-transform:uppercase;letter-spacing:0.1em;">Contact</h4>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="mailto:info@rcasolaire.com" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.88rem;display:flex;align-items:center;gap:8px;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'"><i data-lucide="mail" style="width:16px;height:16px;"></i> info@rcasolaire.com</a>
+          <span style="color:rgba(255,255,255,0.7);font-size:0.88rem;display:flex;align-items:center;gap:8px;"><i data-lucide="map-pin" style="width:16px;height:16px;"></i> Montréal · Laval · Rive-Sud · Québec · Estrie</span>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.15);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+      <p style="font-size:0.75rem;color:rgba(255,255,255,0.5);">© 2025 RCA Solaire. Tous droits réservés.</p>
+      <div style="display:flex;gap:20px;">
+        <a href="/politique-confidentialite" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.75rem;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Politique de confidentialité</a>
+        <a href="/conditions-utilisation" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.75rem;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Conditions d'utilisation</a>
+      </div>
+    </div>
+    <div style="margin-top:20px;font-size:0.68rem;color:rgba(255,255,255,0.35);line-height:1.7;">
+      <p style="margin-bottom:8px;"><strong style="color:rgba(255,255,255,0.5);">Mentions légales</strong> — Les montants de subventions sont basés sur les paramètres du programme provincial et le CIIP fédéral. Les résultats du calculateur sont indicatifs (±15%). Les témoignages reflètent des expériences individuelles. RCA Solaire est conforme à la Loi 25 (Québec).</p>
+    </div>
   </div>
-  <p style="margin-bottom:8px;">Service de référence · Réseau d'entrepreneurs certifiés RBQ · Accrédité ÉcoPerformance · Montréal · Laval · Rive-Sud · Québec · Estrie</p>
-
-  <!-- LIENS LEGAUX -->
-  <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:16px 0;font-size:0.78rem;">
-    <a href="/politique-confidentialite" style="color:var(--text-muted);text-decoration:underline;">Politique de confidentialité</a>
-    <a href="/conditions-utilisation" style="color:var(--text-muted);text-decoration:underline;">Conditions d'utilisation</a>
-    <a href="mailto:info@rcasolaire.com" style="color:var(--text-muted);text-decoration:underline;">Nous contacter</a>
-  </div>
-
-  <!-- DISCLAIMER SUBVENTIONS -->
-  <div style="background:rgba(0,0,0,0.02);border:1px solid var(--border);border-radius:8px;padding:16px 20px;max-width:800px;margin:16px auto 0;text-align:left;">
-    <p style="font-size:0.72rem;color:var(--text-muted);line-height:1.7;margin-bottom:10px;">
-      <strong style="color:var(--text);">Mentions légales — Subventions et incitatifs fiscaux</strong><br>
-      Les montants de subventions présentés sont basés sur les paramètres du programme provincial annoncé, actif le 31 mars 2025, et sur le Crédit d'impôt à l'investissement pour l'électricité propre (CIIP) du gouvernement fédéral. Les résultats du calculateur sont fournis à titre indicatif uniquement (±15%) et ne constituent pas une offre ferme. Une soumission précise requiert une analyse de site. L'admissibilité aux programmes est sujette aux critères gouvernementaux en vigueur. Consultez votre comptable ou conseiller fiscal pour confirmer votre admissibilité avant toute décision d'investissement.
-    </p>
-    <p style="font-size:0.72rem;color:var(--text-muted);line-height:1.7;margin-bottom:10px;">
-      <strong style="color:var(--text);">Protection des renseignements personnels (Loi 25)</strong><br>
-      Les renseignements personnels collectés via ce formulaire (nom, courriel, téléphone) sont utilisés exclusivement pour vous transmettre une soumission solaire et assurer le suivi de votre dossier. Ces informations ne sont pas vendues ni partagées avec des tiers, sauf avec nos partenaires techniques nécessaires à la prestation du service. Vous pouvez exercer votre droit d'accès, de rectification ou de retrait du consentement en tout temps en nous écrivant à <a href="mailto:info@rcasolaire.com" style="color:var(--sun);">info@rcasolaire.com</a>. RCA Solaire est conforme à la <em>Loi modernisant des dispositions législatives en matière de protection des renseignements personnels</em> (Loi 25, Québec).
-    </p>
-    <p style="font-size:0.72rem;color:var(--text-muted);line-height:1.7;">
-      <strong style="color:var(--text);">Témoignages et résultats</strong><br>
-      Les témoignages présentés reflètent des expériences individuelles. Les économies, le ROI et les délais peuvent varier selon la taille du projet, la consommation énergétique, les conditions climatiques et les tarifs Hydro-Québec en vigueur. Les résultats passés ne garantissent pas les résultats futurs.
-    </p>
-  </div>
-
-  <p style="font-size:0.7rem;color:rgba(0,0,0,0.25);margin-top:16px;">© 2025 RCA Solaire. Tous droits réservés.</p>
 </footer>
 
 <!-- STICKY CTA MOBILE -->
